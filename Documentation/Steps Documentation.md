@@ -100,7 +100,8 @@ to the asked questions.
 > * Every one to record every step he makes
 
 
-> ![](media/TOKYO OLYMPICS.jpg)
+> ![](media/TOKYO-OLYMPICS.jpg)
+> > 
 
 # Final Presentation
 
