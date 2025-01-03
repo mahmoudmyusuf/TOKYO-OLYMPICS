@@ -8,8 +8,7 @@
 > Mahmoud Mohamed Abdel Aziz
 > (if other contribute)
 
-## Change the below part with new data
-> ![](media/image1.jpg)
+> ![](media/4.jpg)
 
 # Data Cleaning and Preprocessing
 
