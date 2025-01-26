@@ -1,1 +1,64 @@
+// Control MAX Value in Trends
+
+All Combin Max = 
+MAXX(
+    SUMMARIZE(
+        ALL('Medals Data'),
+        'Medals Data'[Winners | Medals], 
+        "TeamCount", DISTINCTCOUNT('Medals Data'[Team/NOC])
+    ),
+    [TeamCount]
+)
+
+// COUNTS Folder
+
+All Medal Winers = CONCATENATE(
+  CALCULATE(DISTINCTCOUNT('Medals Data'[Team/NOC]),'Medals Data'[Medals Combination]="All-Medals"),"")
+
+Two Medal Winners = CONCATENATE(
+  CALCULATE(DISTINCTCOUNT('Medals Data'[Team/NOC]),'Medals Data'[Medals Combination] 
+  IN {"Gold-Silver", "Silver-Bronze", "Gold-Bronze"}),"")
+
+Single Medal Winners = CONCATENATE(
+  CALCULATE(DISTINCTCOUNT('Medals Data'[Team/NOC]),'Medals Data'[Medals Combination] 
+  IN {"Gold", "Silver", "Bronze"}),"")
+
+Total Winners = DISTINCTCOUNT('Medals Data'[Team/NOC])
+
+// MEDAL% Foldr
+
+// To Show only when filter applied on part of Medals
+Medal % = if([Medals Selected]=[Medal Type Total],"",[Medals Selected]/[Medal Type Total])
+
+Medal total % = [Medals Selected]/[All Medal Total]
+
+Medal total % text = FORMAT([Medals Selected]/[All Medal Total],"0.0%")&"" 
+
+// SUM Folder
+
+All Medal Total = SUMX(ALL('Medals Data'),'Medals Data'[Total])
+
+Medal Type Total = 
+CALCULATE(
+    SUM('Medals Data'[Total]),
+    REMOVEFILTERS('Medals Data'),
+    'Medals Data'[Medal Type] = SELECTEDVALUE('Medals Data'[Medal Type])
+)
+
+Medals Selected = SUM('Medals Data'[Total])
+
+// TITLES Folder
+
+title-Region-Country = if(COUNT('Country-region'[Team/NOC])>1,
+  CONCATENATE(SELECTEDVALUE('Country-region'[region])," Medals"),
+  CONCATENATE(SELECTEDVALUE('Country-region'[region]) & " - " & 
+  SELECTEDVALUE('Country-region'[Team/NOC])," Medals"))
+
+title-Table-Country = 
+if(CONCATENATE([Medal Type Total],SELECTEDVALUE('Medals Data'[Winners | Medals]))="", "All Medal Combinations", 
+CONCATENATE(
+    SELECTEDVALUE('Medals Data'[Winners | Medals]),
+    if(DISTINCTCOUNT('Medals Data'[Medals Combination])>1,""," - " & 
+    SELECTEDVALUE('Medals Data'[Medals Combination]))))
+    & ", "&SELECTEDVALUE('Medals Ranking'[Ranking])
 
