@@ -12,7 +12,7 @@
 **Deliverables**: Cleaned dataset ready for analysis.
 
 ### Data Files:
-[Used Power Query](./Scripts/Power-Query-M-scripts.md.md)
+[Used Power Query](./Scripts/Power-Query-M-scripts.md)
 1. **Tokyo Olympic Data.xlsx**
    - **Medals Data**:
      - Removed unnecessary rows and promoted headers.
