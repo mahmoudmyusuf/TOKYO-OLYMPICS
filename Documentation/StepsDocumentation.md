@@ -13,6 +13,7 @@
 
 ### Data Files:
 [Used Power Query](../Scripts/Power-Query-M-scripts.md)
+
 1. **Tokyo Olympic Data.xlsx**
    - **Medals Data**:
      - Removed unnecessary rows and promoted headers.
@@ -48,6 +49,8 @@
 
 **Deliverables**: Completed Power BI dashboard.
 
+[Used DAX Measures](../Scripts/DAX-Scripts.md)
+
 ### Key Features:
 - **Totalizers and Medal Distribution**: Visualize the distribution of medals over winners and medal types.
 - **Percentage Calculation**: Show percentages for total medals and each medal type when slicers are applied.
@@ -55,6 +58,10 @@
 - **Map Visualization**: Use a map to display medal distribution by country/region.
 
 ![Dashboard](media/TOKYO-OLYMPICS.jpg)
+
+## Final Power BI Dashboard:
+You can view the final Power BI dashboard at:  
+[Tokyo Olympics Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNWFiYzgwM2EtNGE2Mi00ZDUyLWFiNjMtZGFkMTNiNDNlZWFmIiwidCI6IjIwODJkZTQ2LTFhZmEtNGI2NC1hNDQwLTY1NThmODBlOTg0MCIsImMiOjh9)
 
 ## Next Steps and Possible Enhancements:
 - Further refine the dashboard by adding additional filters for deeper analysis.
