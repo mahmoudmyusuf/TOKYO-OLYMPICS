@@ -1,7 +1,8 @@
+# Power Query Medals Data
+This Power Query (M) script used to transform For Medals Data.
 
-** For Medals Data
-let
-    
+```pq
+let 
     // Primary Work, Open Load, Remove unnecessary Rows, and Promte the header
     Source = Excel.Workbook(File.Contents("C:\Users\opr1141\OneDrive\My Power BI Projects\TOKYO OLYMPICS\Dataset\Tokyo Olympic Data.xlsx"), null, true),
     #"Tokyo Olympic_Sheet" = Source{[Item="Tokyo Olympic",Kind="Sheet"]}[Data],
@@ -45,10 +46,11 @@ let
 in
     #"Filtered Rows"
 
+# Power Query Country-region
+This Power Query (M) script used to transform For Country-region.
 
-// For Country-region
+```pq
 let
-    
     // Created this Excel Sheet by using Country-region-all sheet in temporary PowerBI file and Draw table by 
     // Team/NOC from Tokyo Olympic Data and Country & Region From this Sheet
     // Get a table with all Region except about 6 coutries. They are done manually using ChatGPT
@@ -67,7 +69,10 @@ let
 in
     #"Added Custom"
 
-// For Medal Ranking
+# Power Query Medal Ranking
+This Power Query (M) script used to transform For Medal Ranking.
+
+```pq
 let
     
     // This is a copy of Medals Data Table but using Columns Removed before in this new Table
@@ -94,7 +99,11 @@ let
 in
     #"Unpivoted Columns"
 
-//For Medal Type
+
+# Power Query For Medal Type
+This Power Query (M) script used to transform For For Medal Type.
+
+```pq
 let
     
     // Created This Manual Table just to Order Medals by Gold, Silver, then Bronze
@@ -105,7 +114,10 @@ let
 in
     #"Changed Type"
 
-// For Medal Combination
+# Power Query For Medal Combination
+This Power Query (M) script used to transform For For Medal Combination.
+
+```pq
 let
     
     // Created This Manual Table just to Order Medals Combination by Gold, Silver, then Bronze in Each Group
