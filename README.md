@@ -7,7 +7,8 @@
 
 
 ## Project goals:
-> To create a PowerBI report for TOKYO OLYMPICS Medals summarizing all medals by type, countries, 
+> To create a PowerBI report for TOKYO OLYMPICS Medals summarizing all medals by type, countries.
+> Show case countries win how many medals, Percent of Total, How many Type of Medals
 ## How to contribute:
 
 ## Data sources:
