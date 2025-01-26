@@ -1,111 +1,57 @@
-| \[30/12/2024\] |
-|----------------|
+# TOKYO OLYMPICS
 
-| TOKYO OLYMPICS |
-|--------------------------------|
+## Mahmoud Mohamed Abdel Aziz
 
- Mahmoud Mohamed Abdel Aziz
+![Tokyo Olympics](media/4.jpg)
 
- ![](media/4.jpg)
+## Data Cleaning and Preprocessing
 
-# Data Cleaning and Preprocessing
+**Deliverables**: Cleaned dataset ready for analysis.
 
-Data Preprocessing: Clean and preprocess the data using Power BI
+### Data Files:
+1. **Tokyo Olympic Data.xlsx**
+   - **Medals Data**:
+     - Removed unnecessary rows and promoted headers.
+     - Trimmed text and changed data types.
+     - Kept relevant columns: "Team/NOC", "Gold", "Silver", "Bronze".
+     - Created new columns for medal winners by type and new combinations.
+     - Unpivoted medal columns for better filtering.
+     - Removed rows where the number of medals was zero.
+   - **Medals Ranking**:
+     - Created a table with columns "Rank", "Team/NOC", "Total", "Rank by Total".
+     - Renamed "Rank" to "Rank by Gold" for clarity (ranked by gold, silver, then bronze).
+     - Unpivoted the ranking data to be used as slicers in the dashboard.
 
-**Deliverables:** Cleaned dataset ready for analysis.
+2. **Country-region-table.xlsx**
+   - Compiled manually using data from the "Country-region-all" sheet.
+   - Corrected country names for mapping purposes (e.g., "Great Britain" to "United Kingdom").
+   - Ensured the dataset had no errors and was ready for use in Power BI.
 
-## **Steps** 
+### ERD (Entity Relationship Diagram):
+![ERD](media/TokyoERD.jpg)
 
-> The data consists of 1 Tables of Medals data "Tokyo Olympic Data.xlsx"
-> Downloaded Countries names and Regions from internet "Country-region-table.xlsx"
+## Analysis Questions Phase
 
-**Tokyo Olympic Data.xlsx**
-> **Medals Data**
-> * Primary Work, Open Load, Remove unnecessary Rows, and Promte the header
-> * Trimmed Text and Change data Type
-> * Keeps Only required Columns "Team/NOC", "Gold", "Silver", "Bronze"
-> * Created new columns for Winners depending on Medals Type they won
-> * Created new Column for Medals Combinations
-> * Unpivot Gold, Silver, and Bronze Columns to Make them good for filtering
-> * Remove Data when number of Medals is Zero
-> * Confirmed by data view NO Errors and NO Empty data
->
-> **Medals Ranking**
-> * This is a copy of Medals Data Table but using Columns Removed before in this new Table
-> * Keep Columns "Rank", "Team/NOC", "Total", "Rank by Total"
-> * Renamed Rank to be Rank by Gold to remove missunderstanding,By search, I know Rank depend primarily on Gold, if equal check Silver, if equal Check Bronze
-> * Unpivot the Two Ranking Ways to be used as Slicer in Dashboard
-> * Confirmed by data view NO Errors and NO Empty data
+**Deliverables**: Set of questions that the data can answer.
 
-**Country-region-table.xlsx**
+### Key Analysis Questions:
+- Totals of all medals and winners.
+- Distribution of medal types and combinations.
+- Medal distribution by region and country.
+- Ranking teams based on gold or total medals.
 
-> * Created this Excel Sheet by using Country-region-all sheet in temporary PowerBI file and
->     * Created table Visual by Team/NOC from Tokyo Olympic Data and Country & Region From this Sheet
->     * Get a table with all Region except about 6 coutries. They are done manually using ChatGPT
->     * Now All Data are Avaiable and put them in this File
-> *  Using the data in Maps and do Some Manual check for countries.
->     * All of them is OK Except Great Britain. So,
->     * created new Country Column To Keep original name but use United Kingdom name the Map can understand
-> *  Confirmed by data view NO Errors and NO Empty data
+## Dashboard Phase
 
-**Ranking Tables**
-> * **Medal Type** Created Manual Table to Rank Gold - Silver - Bronze
-> *  **Medals Combination** Created Manual Table to Rank Gold combination - Silver combination - Bronze
+**Deliverables**: Completed Power BI dashboard.
 
+### Key Features:
+- **Totalizers and Medal Distribution**: Visualize the distribution of medals over winners and medal types.
+- **Percentage Calculation**: Show percentages for total medals and each medal type when slicers are applied.
+- **Ranking Tables**: Display rankings based on either gold or total medals.
+- **Map Visualization**: Use a map to display medal distribution by country/region.
 
+![Dashboard](media/TOKYO-OLYMPICS.jpg)
 
-**ERD (Entity Relationship Diagram)**
- ![](media/TokyoERD.jpg)
-
-# Analysis Questions Phase
-
-Determine Data Analysis Questions: Determine all possible analysis
-questions that can be deducted from the given dataset and would be of
-interest to the organization's decision makers.
-
-**Deliverables:** Set of analysis questions that can be answered via the
-dataset.
-
-## **Steps** 
-
-**All Available Data**
-
-> * Medals Data Numner and Type for Each Country
-> * All possible Medal Combinations and Type as created in Medal Type and Medals Combination Tables
-> * Check Medal distribution over Countries and Regions
-
-
-**Qustions to investigate**
-> * Totals of All Medals, All Winners
-> * Distribution of Winners (Winning All Medal Type, winning Two Types, or winning only one Type)
-> * Above Combination is detailed more to all posible combination
-> * Distribution of Number of Medals over region
-> * Distribution of Number of Medals over Medal Type
-> * Table for Ranking Teams depending on Gold or Total Medals
-
-
-# Dashboard Phase
-
-Build Dashboard: Build a Power BI dashboard that visualize the answers
-to the asked questions.
-
-**Deliverables:** Power BI dashboard.
-
-## **Steps** 
-
-> * Started The Story Telling by Totalizer and Medals Distribution
->   * Over Winner (3 Medals, 2 Medals, 1 Medal)
->   * Over Medal Type (Gold, Silver, Bronze)
-> * Pecentage of Total Medals and Pecent of Each medal Type When Left-Side Slicer is used:
->   * Slicer for Medal Type
->   * Slicer for Medal Cobination
->   * Slicer for Region
-> * Table for Ranking Teams based on Two Ranking Option above it:
->   * Rank by Gold Medals
->   * Rank by Total Medals
-> * Map Layout for Medal Distibution depend on Type and Number of Medals
-
-
- ![](media/TOKYO-OLYMPICS.jpg)
- 
-
+## Next Steps and Possible Enhancements:
+- Further refine the dashboard by adding additional filters for deeper analysis.
+- Investigate the possibility of integrating other Olympic datasets (e.g., athlete data).
