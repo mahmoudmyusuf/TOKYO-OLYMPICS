@@ -1,1 +1,1 @@
-
+linguist-language=PowerQuery
