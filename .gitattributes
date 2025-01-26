@@ -1,0 +1,7 @@
+# Classify Power Query files
+*.pq linguist-language=PowerQuery
+*.m linguist-language=PowerQuery
+
+# Classify DAX files
+*.dax linguist-language=DAX
+
