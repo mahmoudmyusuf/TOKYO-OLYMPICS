@@ -1,2 +1,3 @@
-*.pq linguist-language=PowerQuery
-*.dax linguist-language=DAX
+*.pq linguist-language=Haskell
+*.m linguist-language=Haskell
+*.dax linguist-language=SQL
