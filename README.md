@@ -15,3 +15,6 @@
 ## Data sources:
 > TOKYO OLYMPICS from intenet
 > Country-region-table from intenet
+
+## Final Dashborad:
+https://app.powerbi.com/view?r=eyJrIjoiNWFiYzgwM2EtNGE2Mi00ZDUyLWFiNjMtZGFkMTNiNDNlZWFmIiwidCI6IjIwODJkZTQ2LTFhZmEtNGI2NC1hNDQwLTY1NThmODBlOTg0MCIsImMiOjh9
