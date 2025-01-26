@@ -1,5 +1,5 @@
 # TOKYO OLYMPICS
-![](/Documenation/media/4.jpg)
+![](/Documentation/media/4.jpg)
 
 > **Datasets** - Store source data files (CSV, Excel, etc.). <br>
 > **Scripts** - Add Power Query M scripts or DAX scripts. <br>
