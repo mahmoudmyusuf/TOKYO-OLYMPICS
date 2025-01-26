@@ -1,14 +1,18 @@
 # TOKYO OLYMPICS
 
-## Mahmoud Mohamed Abdel Aziz
-
-![Tokyo Olympics](media/4.jpg)
+<table border="1" style="border-collapse: collapse; width: 100%;">
+  <td>
+      <img src="media/4.jpg" alt="Project Image" width="200" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
+      <div style="text-align: center; margin-top: 10px; font-weight: bold;"><em> Mahmoud Yusuf</em></div>
+    </td>
+</table>
 
 ## Data Cleaning and Preprocessing
 
 **Deliverables**: Cleaned dataset ready for analysis.
 
 ### Data Files:
+[Used Power Query](./Scripts/Power-Query-M-scripts.md.md)
 1. **Tokyo Olympic Data.xlsx**
    - **Medals Data**:
      - Removed unnecessary rows and promoted headers.
