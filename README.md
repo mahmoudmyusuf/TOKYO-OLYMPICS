@@ -1,6 +1,11 @@
 # TOKYO OLYMPICS
 
-![Tokyo Olympics](Documentation/media/4.jpg)
+<table border="1" style="border-collapse: collapse; width: 100%;">
+  <td>
+      <img src="Documentation/media/4.jpg" alt="Project Image" width="200" style="float: right; margin-left: 15px; margin-bottom: 15px;" />
+      <div style="text-align: center; margin-top: 10px; font-weight: bold;"><em> Mahmoud Yusuf</em></div>
+    </td>
+</table>
 
 ## Project Overview:
 This project involves creating a Power BI dashboard that visualizes the Tokyo Olympics medal data. The dashboard allows users to explore medals by type (gold, silver, bronze), distributions across regions, medal combinations, rankings, and more.
