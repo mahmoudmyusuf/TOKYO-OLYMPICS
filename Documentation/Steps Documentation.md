@@ -1,14 +1,12 @@
-| \[14/12/2024\] |
+| \[30/12/2024\] |
 |----------------|
 
-| Project Name |
+| TOKYO OLYMPICS |
 |--------------------------------|
 
-# Team 
-> Mahmoud Mohamed Abdel Aziz
-> (if other contribute)
+ Mahmoud Mohamed Abdel Aziz
 
-> ![](media/4.jpg)
+ ![](media/4.jpg)
 
 # Data Cleaning and Preprocessing
 
@@ -18,45 +16,43 @@ Data Preprocessing: Clean and preprocess the data using Power BI
 
 ## **Steps** 
 
-The data consists of 4 Tables of data and 1 table as a data dictionary
+> The data consists of 1 Tables of Medals data "Tokyo Olympic Data.xlsx"
+> Downloaded Countries names and Regions from internet "Country-region-table.xlsx"
 
-**Downtime factors Sheet**
-
-> * Loaded sheet and selected Downtime factors Sheet
-> * Promoted header and changed Type
+**Tokyo Olympic Data.xlsx**
+> **Medals Data**
+> * Primary Work, Open Load, Remove unnecessary Rows, and Promte the header
+> * Trimmed Text and Change data Type
+> * Keeps Only required Columns "Team/NOC", "Gold", "Silver", "Bronze"
+> * Created new columns for Winners depending on Medals Type they won
+> * Created new Column for Medals Combinations
+> * Unpivot Gold, Silver, and Bronze Columns to Make them good for filtering
+> * Remove Data when number of Medals is Zero
+> * Confirmed by data view NO Errors and NO Empty data
+>
+> **Medals Ranking**
+> * This is a copy of Medals Data Table but using Columns Removed before in this new Table
+> * Keep Columns "Rank", "Team/NOC", "Total", "Rank by Total"
+> * Renamed Rank to be Rank by Gold to remove missunderstanding,By search, I know Rank depend primarily on Gold, if equal check Silver, if equal Check Bronze
+> * Unpivot the Two Ranking Ways to be used as Slicer in Dashboard
 > * Confirmed by data view NO Errors and NO Empty data
 
-**Line productivity Sheet**
+**Country-region-table.xlsx**
 
-> * Loaded sheet and selected Downtime factors Sheet
-> * Promoted header and changed Type
-> * Confirmed by data view NO Errors and NO Empty data
-> * KEEP ONLY Required Columns
-> * Calculated Actual Period in minutes to:
->    * get this values and use it for further calculations
->    * No negative values confirm no errors in start and end times Entry
+> * Created this Excel Sheet by using Country-region-all sheet in temporary PowerBI file and
+>     * Created table Visual by Team/NOC from Tokyo Olympic Data and Country & Region From this Sheet
+>     * Get a table with all Region except about 6 coutries. They are done manually using ChatGPT
+>     * Now All Data are Avaiable and put them in this File
+> *  Using the data in Maps and do Some Manual check for countries.
+>     * All of them is OK Except Great Britain. So,
+>     * created new Country Column To Keep original name but use United Kingdom name the Map can understand
+> *  Confirmed by data view NO Errors and NO Empty data
 
-**Line downtime Sheet**
-
-> * Loaded sheet and selected Line factors Sheet
-> * Promoted header but found extra undesired row.
-> * removed 1 top row first and Promoted header
-> * Confirmed by data view NO Errors and NO Empty data in Batch but all
-  other data have empty values
-> * Empty values are due to each factor data is displayed in separate
-  column
-> * Unpivot 12 factors in two column factor and Downtime in minutes
-> * Confirmed by data view NO Errors and NO Empty data in all remaining
-  columns
-
-**Products Sheet**
+**Ranking Tables**
+> * **Medal Type** Created Manual Table to Rank Gold - Silver - Bronze
+> *  **Medals Combination** Created Manual Table to Rank Gold combination - Silver combination - Bronze
 
 
-> * Loaded sheet and selected Products Sheet
-> * Promoted header and changed Type
-> * Confirmed by data view NO Errors and NO Empty data
-> * To use Size in calculations, it is better to use it in single unit.
-  SO, we will change all into ml and keep necessary columns only
 
 **ERD (Entity Relationship Diagram)**
 > ![](media/image2.png)
@@ -74,18 +70,18 @@ dataset.
 
 **All Available Data**
 
-> * Downtime \[Factor -- Operator Error (YES/NO)\]
-> * Time \[ Date -- Start -- End -- Actual Period \]
-> * Unique \[ Batch -- Product -- Operator - Flavor\]
+> * Medals Data Numner and Type for Each Country
+> * All possible Medal Combinations and Type as created in Medal Type and Medals Combination Tables
+> * Check Medal distribution over Countries and Regions
 
 
-**To check Downtime (Sum, Average, Max, Min, Mode)** **vs:**
-> * Factor
-> * Operator Error (YES/NO)
-> * Operator (Name)
-> * Batch
-> * Product
-> * Flavor
+**Qustions to investigate**
+> * Totals of All Medals, All Winners
+> * Distribution of Winners (Winning All Medal Type, winning Two Types, or winning only one Type)
+> * Above Combination is detailed more to all posible combination
+> * Distribution of Number of Medals over region
+> * Distribution of Number of Medals over Medal Type
+> * Table for Ranking Teams depending on Gold or Total Medals
 
 
 # Dashboard Phase
@@ -97,29 +93,19 @@ to the asked questions.
 
 ## **Steps** 
 
-> * Every one to record every step he makes
+> * Started The Story Telling by Totalizer and Medals Distribution
+>   * Over Winner (3 Medals, 2 Medals, 1 Medal)
+>   * Over Medal Type (Gold, Silver, Bronze)
+> * Pecentage of Total Medals and Pecent of Each medal Type When Left-Side Slicer is used:
+>   * Slicer for Medal Type
+>   * Slicer for Medal Cobination
+>   * Slicer for Region
+> * Table for Ranking Teams based on Two Ranking Option above it:
+>   * Rank by Gold Medals
+>   * Rank by Total Medals
+> * Map Layout for Medal Distibution depend on Type and Number of Medals
 
 
-> ![](media/TOKYO-OLYMPICS.jpg)
-> > 
+ ![](media/TOKYO-OLYMPICS.jpg)
+ 
 
-# Final Presentation
-
-Prepare a report and presentation summarizing the project work,
-including data analysis, model development, and deployment.
-
-**Deliverables:** Final report and presentation.
-
-## **Steps** 
-
-> * Every one to record every step he makes
-
-
-# Discussion 
-
-\[Summarize the discussion for each issue, state the outcome, and assign
-any action items.\]
-
-# Summary 
-
-\[Summarize the status of each area/department.\]
