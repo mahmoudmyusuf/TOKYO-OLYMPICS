@@ -55,7 +55,7 @@ Data Preprocessing: Clean and preprocess the data using Power BI
 
 
 **ERD (Entity Relationship Diagram)**
-> ![](media/image2.png)
+ ![](media/TokyoERD.jpg)
 
 # Analysis Questions Phase
 
