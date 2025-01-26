@@ -1,3 +1,4 @@
-*.pq linguist-language=Haskell
-*.m linguist-language=Haskell
-*.dax linguist-language=SQL
+*.pq linguist-generated=false
+*.m linguist-generated=false
+*.dax linguist-generated=false
+
